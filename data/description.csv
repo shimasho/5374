@@ -1,6 +1,6 @@
 label,sublabel,description,styles,bgcolor
-不燃ごみ,,,img/moyasanai02.svg,#733b96
-資源ごみ,,,img/shigen02.svg,#77ae1f
-可燃ごみ,,,img/moyasu02.svg,#ea3b13
-プラスチック,,,img/bin02.svg,#2dc7aa
-特定品目,,,img/bin02.svg,#2dc7aa
+燃やさないごみ,,,img/moyasanai02.svg,#733b96
+資源,,,img/shigen02.svg,#77ae1f
+燃やすごみ,,,img/moyasu02.svg,#ea3b13
+びん,,,img/bin02.svg,#2dc7aa
+
