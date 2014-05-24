@@ -78,7 +78,8 @@ var TrashModel = function(_lable, _cell, remarks) {
   this.regularFlg = 1;      // 定期回収フラグ（デフォルトはオン:1）
 
   var result_text = "";
-  var today = new Date();
+  //var today = new Date();
+  var today = new Date(11,12,26);
 
   for (var j in this.dayCell) {
     if (this.dayCell[j].length == 1) {
@@ -143,7 +144,8 @@ var TrashModel = function(_lable, _cell, remarks) {
     // 定期回収の場合
     if (this.regularFlg == 1) {
 
-      var today = new Date();
+//      var today = new Date();
+      var today = new Date(11,12,26);
 
       // 12月 +3月　を表現
       for (var i = 0; i < MaxMonth; i++) {
@@ -165,6 +167,7 @@ var TrashModel = function(_lable, _cell, remarks) {
             //4月1日を起点として第n曜日などを計算する。
             var date = new Date(curYear, month - 1, 1);
             var d = new Date(date);
+            var d = new Date(11,12,26);
             //コンストラクタでやろうとするとうまく行かなかった。。
             //
             //4月1日を基準にして曜日の差分で時間を戻し、最大５週までの増加させて毎週を表現
@@ -218,7 +221,8 @@ var TrashModel = function(_lable, _cell, remarks) {
 	//week=0が第1週目です。
 	for (var week = 0; week < 27; week++) {
           // basedate を起点に、最も近い偶数週目を計算する。
-          var d = new Date(date);
+          //var d = new Date(date);
+          var d = new Date(11,12,26);
           // basedate を基準に、最大53週まで増加させて隔週を表現
           d.setTime( basedate.getTime() + week * 14 * 24 * 60 * 60 * 1000 );
           //年末年始休暇のスキップ対応
@@ -251,7 +255,8 @@ var TrashModel = function(_lable, _cell, remarks) {
       return 0;
     })
     //直近の日付を更新
-    var now = new Date();
+//    var now = new Date();
+    var now = new Date(11,12,26);
 
     for (var i in day_list) {
       if (this.mostRecent == null && now.getTime() < day_list[i].getTime() + 24 * 60 * 60 * 1000) {
