@@ -466,7 +466,9 @@ $(function() {
     var ableSVG = (window.SVGAngle !== void 0);
     //var ableSVG = false;  // SVG未使用の場合、descriptionの1項目目を使用
     var areaModel = areaModels[row_index];
-    var today = new Date();
+//    var today = new Date();
+    var today = new Date(11,12,26);
+
     //直近の一番近い日付を計算します。
     areaModel.calcMostRect();
     //トラッシュの近い順にソートします。
