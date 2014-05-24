@@ -172,13 +172,12 @@ var TrashModel = function(_lable, _cell, remarks) {
               ((7 + getDayIndex(day_mix[j].charAt(0)) - date.getDay()) % 7) + week * 7 * 24 * 60 * 60 * 1000
             );
             //年末年始休暇のスキップ対応
-/*
             if (SkipSuspend) {
               if (areaObj.isBlankDay(d)) {
 		continue;
 	      }
 	    }
- */
+
             //年末年始のずらしの対応
             //休止期間なら、今後の日程を１週間ずらす
 	    if (areaObj.isBlankDay(d)) {
