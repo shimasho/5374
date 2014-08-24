@@ -377,7 +377,10 @@ $(function() {
         for (var r = 2; r < 2 + MaxDescription; r++) {
           if (area_days_label[r]) {
             var trash = new TrashModel(area_days_label[r], row[r], remarks);
-            area.trash.push(trash);
+
+            if (trash.dayCell != "--") {
+              area.trash.push(trash);
+            }
           }
         }
       }
