@@ -364,6 +364,16 @@ $(function() {
     localStorage.setItem("selected_area_name", name);
   }
 
+    function getSelectedAreaMasterNameBefore() {
+    return localStorage.getItem("selected_area_master_name_before");
+  }
+
+  function setSelectedAreaMasterNameBefore(name) {
+    try {
+      localStorage.setItem("selected_area_master_name_before", name);
+    } catch (domException) {
+    }
+  }
   function csvToArray(filename, cb) {
     $.get(filename, function(csvdata) {
       //CSVのパース作業
