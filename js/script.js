@@ -345,6 +345,16 @@ $(function() {
 
 /*   var descriptions = new Array(); */
 
+  function getSelectedAreaMasterName() {
+    return localStorage.getItem("selected_area_master_name");
+  }
+
+  function setSelectedAreaMasterName(name) {
+    try {
+      localStorage.setItem("selected_area_master_name", name);
+    } catch (domException) {
+    }
+  }
 
   function getSelectedAreaName() {
     return localStorage.getItem("selected_area_name");
