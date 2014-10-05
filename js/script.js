@@ -341,6 +341,8 @@ $(function() {
   var descriptions = new Array();
   var areaModels = new Array();
   var remarks = new Array();
+  var areaMasterModels = new Array();
+
 /*   var descriptions = new Array(); */
 
 
