@@ -437,8 +437,8 @@ $(function() {
         var row = tmp[i];
         var area = new AreaModel();
         area.mastercode = row[0];
-        area.label = row[0];
-        area.centerName = row[1];
+        area.label = row[1];
+        area.centerName = row[2];
 
         // 区コードが一致した場合のみデータ格納
         if(area.mastercode == mastercode){
