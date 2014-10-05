@@ -667,11 +667,10 @@ $(function() {
 
   // ★マスターの変更時
   function onChangeSelectMaster(row_index) {
-    ctx.localize(['selectarea'], function(l10n) {
       if (row_index == -1) {
         // 初期化
         $("#accordion").html("");
-        $("#select_area").html('<option value="-1">' + l10n.entities.selectarea.value + '</option>');
+        $("#select_area").html('<option value="-1">地区を選択して下さい</option>');
         setSelectedAreaMasterName("");
         return;
       }
@@ -692,7 +691,6 @@ $(function() {
       setSelectedAreaMasterNameBefore(areaMasterModels[row_index].name);
 
       updateAreaList(areaMasterModels[row_index].mastercode);
-    });
   }
 
   function getAreaIndex(area_name) {
