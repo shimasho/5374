@@ -691,7 +691,7 @@ $(function() {
       if(checkAreaMasterName == checkAreaMasterNameBefore){
       }else{
         $("#accordion").html("");
-        $("#select_area").html('<option value="-1">地区を選択して下さい。</option>');
+        $("#select_area").html('<option value="-1">地域を選択して下さい。</option>');
         setSelectedAreaName("");
       }
 
