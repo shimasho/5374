@@ -96,6 +96,9 @@ var TrashModel = function(_lable, _cell, remarks) {
       result_text += "隔週" + this.dayCell[j].charAt(1) + "曜 ";
       this.regularFlg = 2;      // 隔週フラグ
       /****ADD****/
+    } else if ( this.dayCell[j].length == 11 && this.dayCell[j].substr(0,2) == "4週" ) {
+      result_text += "4週" + this.dayCell[j].charAt(1) + "曜 ";
+      this.regularFlg = 3;	// 4週フラグ
     } else {
       // 不定期回収の場合（YYYYMMDD指定）
       result_text = "不定期 ";
@@ -238,7 +241,32 @@ var TrashModel = function(_lable, _cell, remarks) {
 	  day_list.push(d);
 	}
       }
-    /***ADD*****/   
+    /***ADD*****/
+    } else if ( this.regularFlg == 3 {
+      // 4週回収
+      for (var j in day_mix) {
+        var year = parseInt(day_mix[j].substr(3, 4));
+        var month = parseInt(day_mix[j].substr(7, 2)) - 1;
+        var day = parseInt(day_mix[j].substr(9, 2));
+        var basedate = new Date(year, month, day);
+
+	//week=0が第1週目です。
+	for (var week = 0; week < 27; week++) {
+          // basedate を起点に、最も近い偶数週目を計算する。
+          var d = new Date(date);
+          // basedate を基準に、最大53週まで増加させて4週を表現
+          d.setTime( basedate.getTime() + week * 28 * 24 * 60 * 60 * 1000 );
+          //年末年始休暇のスキップ対応
+          if (SkipSuspend) {
+            if (areaObj.isBlankDay(d)) {
+	      continue;
+	    }
+          }
+	  day_list.push(d);
+	}
+      }
+
+
     } else {
       // 不定期回収の場合は、そのまま指定された日付をセットする
       for (var j in day_mix) {
@@ -594,7 +622,7 @@ $(function() {
 
           var dateLabel = trash.getDateLabel();
           //あと何日かを計算する処理です。
-          var leftDayText = "";
+          var leftDayText = "(情報なし)";
           if ( trash.mostRecent != null ) {
             var leftDay = Math.ceil((trash.mostRecent.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
 
