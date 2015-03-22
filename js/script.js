@@ -242,7 +242,7 @@ var TrashModel = function(_lable, _cell, remarks) {
 	}
       }
     /***ADD*****/
-    } else if ( this.regularFlg == 3 {
+    } else if ( this.regularFlg == 3 ) {
       // 4週回収
       for (var j in day_mix) {
         var year = parseInt(day_mix[j].substr(3, 4));
