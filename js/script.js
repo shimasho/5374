@@ -45,11 +45,13 @@ var AreaModel = function() {
   */
   this.sortTrash = function() {
     this.trash.sort(function(a, b) {
-      var at = a.mostRecent.getTime();
-      var bt = b.mostRecent.getTime();
-      if (at < bt) return -1;
-      if (at > bt) return 1;
-      return 0;
+      if ( a.mostRecent != null & b.mostRecent != null ) {
+        var at = a.mostRecent.getTime();
+        var bt = b.mostRecent.getTime();
+        if (at < bt) return -1;
+        if (at > bt) return 1;
+        return 0;
+      }
     });
   };
 };
