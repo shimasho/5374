@@ -105,8 +105,10 @@ var TrashModel = function(_lable, _cell, remarks) {
   this.dayLabel = result_text;
 
   this.getDateLabel = function() {
-    var result_text = this.mostRecent.getFullYear() + "/" + (1 + this.mostRecent.getMonth()) + "/" + this.mostRecent.getDate();
-    return this.getRemark() + this.dayLabel + " " + result_text;
+    if ( this.mostRecent != null ) {
+      var result_text = this.mostRecent.getFullYear() + "/" + (1 + this.mostRecent.getMonth()) + "/" + this.mostRecent.getDate();
+      return this.getRemark() + this.dayLabel + " " + result_text;
+    }
   };
 
   var day_enum = ["日", "月", "火", "水", "木", "金", "土"];
