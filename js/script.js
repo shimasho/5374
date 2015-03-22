@@ -108,6 +108,8 @@ var TrashModel = function(_lable, _cell, remarks) {
     if ( this.mostRecent != null ) {
       var result_text = this.mostRecent.getFullYear() + "/" + (1 + this.mostRecent.getMonth()) + "/" + this.mostRecent.getDate();
       return this.getRemark() + this.dayLabel + " " + result_text;
+    } else {
+      return "";
     }
   };
 
