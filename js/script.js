@@ -592,10 +592,10 @@ $(function() {
 
           var dateLabel = trash.getDateLabel();
           //あと何日かを計算する処理です。
+          var leftDayText = "";
           if ( trash.mostRecent != null ) {
             var leftDay = Math.ceil((trash.mostRecent.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
 
-            var leftDayText = "";
             if (leftDay == 0) {
               leftDayText = "今日";
             } else if (leftDay == 1) {
