@@ -36,7 +36,19 @@ var AreaModel = function() {
   this.setCenter = function(center_data) {
     for (var i in center_data) {
       if (this.centerName == center_data[i].name) {
-        this.center = center_data[i];
+
+	/* 直近の休止期間データを利用する (複数休止期間対応) */
+	if ( this.center == null ) {
+	  this.center = center_data[i];
+	} else {
+	  var today = new Date();
+//          var today = new Date(2015,4, 5);	// DEBUG
+
+	  if ( today.getTime() < center_data[i].endDate.getTime() && 
+               today.getTime() > this.center.endDate.getTime() ) {
+            this.center = center_data[i];
+	  }
+        }
       }
     }
   };
@@ -97,7 +109,7 @@ var TrashModel = function(_lable, _cell, remarks) {
       this.regularFlg = 2;      // 隔週フラグ
       /****ADD****/
     } else if ( this.dayCell[j].length == 11 && this.dayCell[j].substr(0,2) == "4週" ) {
-      result_text += "4週" + this.dayCell[j].charAt(1) + "曜 ";
+      result_text += "4週毎" + this.dayCell[j].charAt(2) + "曜 ";
       this.regularFlg = 3;	// 4週フラグ
     } else {
       // 不定期回収の場合（YYYYMMDD指定）
@@ -155,6 +167,7 @@ var TrashModel = function(_lable, _cell, remarks) {
     if (this.regularFlg == 1) {
 
       var today = new Date();
+//      var today = new Date(2015, 4, 5);	// DEBUG
 
       // 12月 +3月　を表現
       for (var i = 0; i < MaxMonth; i++) {
@@ -288,6 +301,7 @@ var TrashModel = function(_lable, _cell, remarks) {
     });
     //直近の日付を更新
     var now = new Date();
+//    var now = new Date(2015, 4, 5);	// DEBUG
 
     for (var i in day_list) {
       if (this.mostRecent == null && now.getTime() < day_list[i].getTime() + 24 * 60 * 60 * 1000) {
@@ -573,7 +587,9 @@ $(function() {
     var ableSVG = (window.SVGAngle !== void 0);
     //var ableSVG = false;  // SVG未使用の場合、descriptionの1項目目を使用
     var areaModel = areaModels[row_index];
+//    var today = new Date(2015, 4, 5);		// DEBUG
     var today = new Date();
+
 
     //直近の一番近い日付を計算します。
     areaModel.calcMostRect();
