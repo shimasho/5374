@@ -3,4 +3,4 @@ label,sublabel,description,styles,bgcolor
 燃えるごみ,,,img/moyasu02.svg,#ea3b13
 びん,,,img/bin02.svg,#2dc7aa
 集積場所には出せない物,,,img/dasemasen.svg,#733b96 
-収集しません,,,img/dasemasen.svg,#733b96 
+収集しません,,,img/moyasanai02.svg ,#685ecf
