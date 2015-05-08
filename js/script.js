@@ -75,7 +75,7 @@ var TrashModel = function(_lable, _cell, remarks) {
   }
   this.label = _lable;
   this.description;
-  this.regularFlg = 0;      // 定期回収フラグ（デフォルトはオン:1）
+  this.regularFlg = 1;      // 定期回収フラグ（デフォルトはオン:1）
 
   var result_text = "";
   var today = new Date();
@@ -89,7 +89,7 @@ var TrashModel = function(_lable, _cell, remarks) {
     } else {
       // 不定期回収の場合（YYYYMMDD指定）
       result_text = "不定期 ";
-      this.regularFlg = 1;  // 定期回収フラグオフ
+      this.regularFlg = 0;  // 定期回収フラグオフ
     }
   }
   this.dayLabel = result_text;
