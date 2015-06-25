@@ -1,4 +1,4 @@
-type,name,notice,furigana
+﻿type,name,notice,furigana
 資源ごみ,空きかん,,あ
 資源ごみ,空きびん,,あ
 資源ごみ,ガラス製品,,か
@@ -38,4 +38,3 @@ type,name,notice,furigana
 資源古紙,段ボール,,た
 資源古紙,台紙類(ミックス古紙),,た
 資源古紙,包装紙類(ミックス古紙),,ほ
-
