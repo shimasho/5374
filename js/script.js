@@ -122,9 +122,17 @@ var TrashModel = function(_lable, _cell, remarks) {
   this.getDateLabel = function() {
     if ( this.mostRecent != null ) {
       var result_text = this.mostRecent.getFullYear() + "/" + (1 + this.mostRecent.getMonth()) + "/" + this.mostRecent.getDate();
-      return this.getRemark() + this.dayLabel + " " + result_text;
+      return /*this.getRemark() + this.dayLabel + */" " + result_text;
     } else {
       return "";
+    }
+  };
+    this.getDateLabel2 = function() {
+    if ( this.mostRecent != null ) {
+      /*var result_text = this.mostRecent.getFullYear() + "/" + (1 + this.mostRecent.getMonth()) + "/" + this.mostRecent.getDate();*/
+      return this.getRemark() + this.dayLabel + " " /*+ result_text;
+    } else {
+      return "";*/
     }
   };
 
@@ -637,6 +645,7 @@ $(function() {
           target_tag += "</ul>";
 
           var dateLabel = trash.getDateLabel();
+		  var dateLabel2 = trash.getDateLabel2();
           //あと何日かを計算する処理です。
           var leftDayText = "(情報なし)";
           if ( trash.mostRecent != null ) {
@@ -658,7 +667,7 @@ $(function() {
             '<div class="accordion-group" id="accordion-group' + d_no + '">' +
             '<div class="accordion-heading">' +
             '<a class="accordion-toggle" style="height:' + accordion_height + 'px" data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '">' +
-            '<div class="left-day">' + leftDayText + '</div>' +
+            '<div class="left-day">' + leftDayText +dateLabel+ '</div>' +
             '<div class="accordion-table" >';
           if (ableSVG && SVGLabel) {
             accordionHTML += '<img src="' + description.styles + '" alt="' + description.label + '"  />';
@@ -666,7 +675,7 @@ $(function() {
             accordionHTML += '<p class="text-center">' + description.label + "</p>";
           }
           accordionHTML += "</div>" +
-            '<h6><p class="text-left date">' + dateLabel + "</p></h6>" +
+            '<h6><p class="text-left date">' + dateLabel2 + "</p></h6>" +
             "</a>" +
             "</div>" +
             '<div id="collapse' + i + '" class="accordion-body collapse">' +
