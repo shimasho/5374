@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <!-- Basic meta -->
-    <meta title="5374.jp 静岡県駿東郡清水町版" />
-    <meta name="description" content="Code for Kanazawaの作った5374.jpの静岡県駿東郡清水町版です。5374.jpを使えば、あなたの地域で、いつ、どのゴミが回収されるのか、簡単に知る事ができます。" />
-    <meta keywords="" content="清水町,駿東郡清水町,5374,ゴミ収集,ゴミ回収" />
+    <meta title="5374.jp 静岡県島田市版" />
+    <meta name="description" content="Code for Kanazawaの作った5374.jpの静岡県島田市版です。5374.jpを使えば、あなたの地域で、いつ、どのゴミが回収されるのか、簡単に知る事ができます。" />
+    <meta keywords="" content="島田市,5374,ゴミ収集,ゴミ回収" />
     <!-- //Basic meta -->
     <!-- OGP -->
-    <meta property="og:title" content="5374.jp 静岡県駿東郡清水町版" />
+    <meta property="og:title" content="5374.jp 静岡県島田市版" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://hamamatsu.5374.jp/" />
-    <meta property="og:description" content="Code for Kanazawaの作った5374.jpの静岡県駿東郡清水町版です。5374.jpを使えば、あなたの地域で、いつ、どのゴミが回収されるのか、簡単に知る事ができます。" />
+    <meta property="og:description" content="Code for Kanazawaの作った5374.jpの静岡県島田市版です。5374.jpを使えば、あなたの地域で、いつ、どのゴミが回収されるのか、簡単に知る事ができます。" />
     <!-- //OGP -->
-    <title>5374(ｺﾞﾐﾅｼ).jp -静岡県駿東郡清水町版-</title> 
+    <title>5374(ｺﾞﾐﾅｼ).jp -静岡県島田市版-</title> 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
@@ -22,55 +22,194 @@
     <link href="css/custom.css" rel="stylesheet" media="screen" />
    <style id="accordion-style" type="text/css"></style>
   </head>
-   <table border="2">
-  <tr>
-   <td><img src="yuusui1.png" width="83" height="116" ></td>
-    <td><p><h3>５３７４アプリ　駿東郡清水町版</h3></p>
-  <p>掲載がないものについては、ごみの収集日一覧を参照いただくか、<a href="tel:0559731111" style=" color: #000000;text-decoration: underline;" target=”_blank”>清水町役場055-973-1111（代表）</a>までお問い合わせください。</p></td>
-   <td><img src="yuusui2.png" width="83" height="116"></td>
-    </tr>
-    </table>
+    <p><h3>５３７４アプリ　島田市版</h3></p>
+  <p>掲載がないものについては「ごみカレンダーを参照いただくか、<a href="tel:0547353744" style=" color: #000000;text-decoration: underline;" target=”_blank”>環境課(３５－３７４４)</a>までお問い合わせください。」</p>
   <body>
-   <hr> 
+   
+
+  <div id="accordion"></div>
+  <select class="form-control" id="select_area_master"></select>
+  <select class="form-control" id="select_area"></select>
+  
+         <FONT color=#0000ff><p><h5>タップまたはクリックで地域を選択してください。</h5></p></FONT>
+        <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse3_1">収集しないもの</a>
+      </div>
+      <div id="collapse3_1" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div id="help">
+            <h4>あ</h4>
+              <li>アスベスト含有物</li>
+              <p>専門店にご相談ください</p>
+            <h4>い</h4>
+              <li>衣類乾燥機</li>
+              <p>家電リサイクル対象商品</p>
+            <h4>え</h4>
+              <li>エアコン</li>
+              <p>家電リサイクル対象商品</p>
+            <h4>お</h4>
+              <li>オートバイ（スクーター）</li>
+              <p>二輪車リサイクル対象商品</p>
+            <h4>し</h4>
+              <li>消火器</li>
+              <p>販売店か郵便局へお問い合わせください</p>
+            <h4>せ</h4>
+              <li>洗濯機</li>
+              <p>家電リサイクル対象商品</p>
+            <h4>た</h4>
+              <li>タイヤ</li>
+              <p>専門店にご相談下さい</p>
+            <h4>て</h4>
+              <li>テレビ（液晶含む）</li>
+              <p>家電リサイクル対象商品</p>
+            <h4>と</h4>
+              <li>塗料</li>
+              <p>専門店にご相談下さい</p>
+            <h4>の</h4>
+              <li>農機具</li>
+              <p>専門店にご相談下さい</p>
+              <li>農業用ビニール</li>
+              <p>専門店にご相談下さい</p>
+              <li>農薬</li>
+              <p>専門店にご相談下さい</p>
+            <h4>れ</h4>
+              <li>冷蔵庫・冷凍庫</li>
+              <p>家電リサイクル対象商品</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <hr> 
     <div class="accordion-group-top">
       <div class="accordion-heading">
-       <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse3_5">粗大ごみ</a>
+       <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse3_5">集積所には出せないもの</a>
       </div>
       <div id="collapse3_5" class="accordion-body collapse">
         <div class="accordion-inner">
           <div id="help">
-            <FONT color=#0000ff>粗大ごみ、予約制で有料（ただし小型家電は無料）です。以下のとおり、粗大ごみ置き場に連絡し個人で搬入してください。<a href="tel:0559710530" style=" color: #000000;text-decoration: underline;" target=”_blank”>(予約先 055-971-0530)</a></FONT><br><br>
-<FONT color=#0000ff><strong>１　粗大ごみ置場に連絡し予約する。</strong></FONT><br>
-電話または粗大ごみ置場にて粗大ごみ持ち込み日を確かめる。<br>
-予約、搬入時間 ９時から１６時まで<br>
-<a href="tel:0559710530" style=" color: #000000;text-decoration: underline;" target=”_blank”>電話055-971-0530</a>（年末年始を除く毎日）<br>
-住所、氏名、電話番号、搬入する粗大ごみの品目と数を連絡する。（当日の予約、追加はできません。）<br>
-<FONT color=#0000ff><strong>２　粗大ごみ置場に粗大ごみを搬入する。</strong></FONT><br>
-搬入時は置場での混雑が予想されます。車の出入りに御注意ください。<br>
-搬入時に、本人確認をさせていただきますので、運転免許証や保険証をお持ちください。<br>
-<FONT color=#0000ff><strong>３　粗大ごみ処理の料金</strong></FONT><br>
-ごみの重さ	金額（料金）<br>
-３０Kg以下	２００円<br>
-３０Kgを超え５０Kg以下	３００円<br>
-５０Kgを超え１００Kg以下	５００円<br>
-１００Kｇを超える場合<br>
-以後５０Kgごとに	＋３００円<br>
-障がい者、高齢者、母子家庭等の住民税非課税世帯の方は、役場地域振興課へ事前申請することによって、処理費を免除することができます。<br>
-<FONT color=#0000ff><strong>その他</strong></FONT><br>
-障がい者、高齢者、母子家庭等の世帯については、地区の民生委員さんに御相談ください。<br>
-（御自身で搬入できない方に限ります。）<br>
-御自身で搬入できない方は、町シルバー人材センター<a href="tel:0559735949" style=" color: #000000;text-decoration: underline;" target=”_blank”>（電話055-973-5949）が代行（有料）いたします。</a><br>
-<FONT color=#0000ff><strong>出し方の注意点</strong></FONT><br>
-家具ベット等はなるべく分解して持ち込んでください。<br>
-粗大ごみとして持ち込む製品はダンボールから出して持ち込んでください。<br>
-テレビ、冷蔵庫、洗濯機（衣服乾燥機）、エアコン、パソコンは回収いたしません。（電気店等に相談）<br>
-消火器、タイヤ、農機具は業者へ<br>
-<hr> 
-  <div id="accordion"></div>
-  <select class="form-control" id="select_area_master"></select>
-  <select class="form-control" id="select_area"></select>
-   <div class="accordion" id="accordion3">
+            <FONT color=#0000ff>原則自己搬入。自己搬入不可能なものに限り予約<a href="tel:0547353744" style=" color: #000000;text-decoration: underline;" target=”_blank”>(環境課 ３５－３７４４)</a>後戸別収集</FONT>
+            <h4>い</h4>
+              <li>一輪車（運搬用）</li>
+              <p>直接搬入（燃えないごみ）又は戸別収集</p>
+            <h4>う</h4>
+              <li>乳母車</li>
+              <p>直接搬入（燃えないごみ）又は戸別収集</p>
+            <h4>え</h4>
+              <li>エレクトーン</li>
+              <p>直接搬入（燃えないごみ）又は戸別収集</p>
+            <h4>お</h4>
+              <li>オイルヒーター</li>
+              <p>直接搬入（燃えないごみ）又は戸別収集</p>
+              <li>オルガン</li>
+              <p>直接搬入（燃えるごみ）又は戸別収集</p>
+            <h4>き</h4>
+              <li>脚立</li>
+              <p>直接搬入（燃えないごみ）または戸別収集</p>
+              <li>キャリア（自動車用）</li>
+              <p>直接搬入（燃えないごみ）または戸別収集</p>
+              <li>鏡台</li>
+              <p>環境課へお問い合わせください</p>
+            <h4>げ</h4>
+              <li>下駄箱</li>
+              <p>直接搬入（燃えるごみ）または戸別収集</p>
+               <h4>こ</h4>
+              <li>米びつ・（大型）</li>
+              <p>直接搬入（燃えないごみ）または戸別収集</p>
+               <h4>さ</h4>
+              <li>サーフボード</li>
+              <p>直接搬入（燃えるごみ）または戸別収集</p>
+              <h4>じ</h4>
+              <li>自転車（電動を含む）</li>除湿機
+              <p>直接搬入（燃えないごみ）または戸別収集</p>
+               <li>除湿機</li>
+              <p>環境課へお問い合わせください</p>
+            <h4>す</h4>
+              <li>スキー板</li>
+              <p>直接搬入（燃えるごみ)又は戸別収集</p>
+            <h4>そ</h4>
+             <li>ソファー</li>
+              <p>直接搬入（燃えるごみ)又は戸別収集</p>
+            <h4>た</h4>
+             <li>耐火金庫</li>
+              <p>直接搬入（燃えないごみ)</p>
+             <li>体温計(水銀式)</li>
+              <p>専門店にご相談ください</p>
+             <li>畳</li>
+              <p>環境課へお問い合わせください</p>
+             <li>たんす</li>
+              <p>直接搬入（燃えないごみ）又は戸別収集</p>
+            <h4>で</h4>
+             <li>電子ピアノ</li>
+              <p>直接搬入（燃えないごみ）又は戸別収集</p>
+            <h4>は</h4>
+             <li>パイプベッド</li>
+              <p>直接搬入（燃えないごみ）又は戸別収集</p>
+             <li>柱</li>
+              <p>環境課へお問い合わせください</p>
+            <h4>ぴ</h4>
+             <li>ピアノ</li>
+              <p>専門店にご相談ください</p>
+            <h4>ぶ</h4>
+             <li>ブロック・レンガ</li>
+              <p>直接搬入（ガレキ類）　環境課で指示を受けてください</p>
+            <h4>へ</h4>
+             <li>ベビーベッド</li>
+              <p>直接搬入（燃えるごみ）又は戸別回収</p>
+             <li>便器</li>
+              <p>直接搬入（最終処分場）</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <hr> 
+  <div class="accordion-group-top">
+      <div class="accordion-heading">
+        <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse3_2">古紙回収<川根地区></a>
+      </div>
+      <div id="collapse3_2" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div id="help">
+            <h4>川根地区の古紙類</h4>
+              <li>ダンボール</li>
+              <li>新聞紙</li>
+              <li>雑誌</li>
+              <li>雑紙</li>
+              <br>
+              <p>これらのものは市の収集はありません。</p>
+              <p>町内会、子供会等集団回収にご協力ください。</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <hr> 
+    
      <div class="accordion-group-top">
+      <div class="accordion-heading">
+        <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse3_4">施設案内</a>
+      </div>
+      <div id="collapse3_4" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <div id="help">
+            <h4>田代環境プラザ</h4>
+             <p><a href="tel:0547341122" style=" color: #000000;text-decoration: underline;" target=”_blank”>田代環境プラザ(３４ -１１２２)</a></p>
+             <br>
+            <h4>環境課（旧清掃センター）</h4>
+             <p><a href="tel:0547353744" style=" color: #000000;text-decoration: underline;" target=”_blank”>環境課（旧清掃センター）(３５ -３７４４)</a></p>
+             <br>
+             
+             <h4>桜井資源</h4>
+             <p><a href="tel:0547376138" style=" color: #000000;text-decoration: underline;" target=”_blank”>桜井資源(３７ -６１３８)</a></p>
+             <br>
+             
+             <h4>最終処分場</h4>
+             <p><a href="tel:0547383596" style=" color: #000000;text-decoration: underline;" target=”_blank”>最終処分場(３８ -３５９６)</a></p>
+             <br> 
+            </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+         <div class="accordion-group-top">
       <div class="accordion-heading">
         <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse3_3">リンク</a>
       </div>
@@ -78,20 +217,24 @@
         <div class="accordion-inner">
           <div id="help">
            <h4><a href="http://www.edu.pref.shizuoka.jp/shimada-ch/home.nsf/IndexFormView?OpenView" style=" color: #000000;text-decoration: underline;" target=”_blank”>島田商業</a></h4>
-           <p>島田商業高校は駿東郡清水町のごみについてのオープンデータを公開しています。詳しくはHPをご覧ください。</p>
+           <p>島田商業高校は島田市のごみについてのオープンデータを公開しています。詳しくはHPをご覧ください。</p>
            <ul>
               <a href="http://www.edu.pref.shizuoka.jp/shimada-ch/home.nsf/SearchMainView/%E7%89%B9%E8%89%B2%E3%81%82%E3%82%8B%E6%8E%88%E6%A5%AD%E5%AE%9F%E8%B7%B5%C2%A75374.jp?OpenDocument&Category=%E7%89%B9%E8%89%B2%E3%81%82%E3%82%8B%E6%8E%88%E6%A5%AD%E5%AE%9F%E8%B7%B5&SubCategory=5374.jp" style=" color: #000000;text-decoration: underline;" target=”_blank”>特色ある授業実践</a><br />
             </ul>
-          <h4><a href="http://www.town.shimizu.shizuoka.jp/index.html" style=" color: #000000;text-decoration: underline;" target=”_blank”>駿東郡清水町</a></h4>
+          <h4><a href="https://www.city.shimada.shizuoka.jp/index.html" style=" color: #000000;text-decoration: underline;" target=”_blank”>島田市</a></h4>
             <ul>
-              <a href="http://www.town.shimizu.shizuoka.jp/category00000027.html" style=" color: #000000;text-decoration: underline;" target=”_blank”>Web版　家庭のごみの分け方・出し方</a><br />
+              <a href="https://www.city.shimada.shizuoka.jp/kantan/gomi.html" style=" color: #000000;text-decoration: underline;" target=”_blank”>ごみ・リサイクル</a><br />
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <hr> 
-  <div class="accordion" id="accordion3">
+    <hr>    
+
+    
+    
+    
+    
     <div class="accordion-group-top">
       <div class="accordion-heading">
         <a class="accordion-toggle-top" data-toggle="collapse" data-parent="#accordion3" href="#collapse3_0">5374.jpについて</a>
@@ -101,11 +244,10 @@
           <div id="help">
 ゴミの問題は、どの地域でも深刻になりつつあります。
 Code for Kanazawaでは、先ずは正しいゴミの捨て方に注目しました。
-目的と使い方は、とてもシンプルです。</br>
-※本アプリはCode for Kanazawaが開発した『5374.jp』を、静岡県駿東郡清水町版に対応したものです。
+目的と使い方は、とてもシンプルです。
             <h2>目的</h2>
 「いつ、どのゴミが収集されているのか？」
-例えばお引っ越しをされた場合や、新しく駿東郡清水町に住むことになった時、このアプリを使えば、すぐに分かるようにデザインされています。
+例えばお引っ越しをされた場合や、新しく金沢市に住むことになった時、このアプリを使えば、すぐに分かるようにデザインされています。
             <h2>使い方</h2>
             <h3>色でゴミのジャンルを表示</h3>
             <p>一番近いゴミの日とジャンルを上から順に表示しています。</p>
@@ -115,7 +257,7 @@ Code for Kanazawaでは、先ずは正しいゴミの捨て方に注目しまし
             <p>お住まいの地域を選択することで、ゴミ収集日が自動的に更新されます。</p>
             <div id="caption">
               <h4>提供されるゴミ情報について</h4>
-              <p>駿東郡清水町が公開している<a href="http://www.town.shimizu.shizuoka.jp/category00000027.html" style="color:#000000;" target="_blank">分別収集カレンダー</a>から独自に解析し、アプリに実装しました。</p>
+              <p>島田市が公開しているデータから島田商業が独自に解析し、アプリに実装しました。</p>
               <h4>ライセンスについて</h4>
               <p>本アプリの著作権はCode for Kanazawaに帰属します。</p>
             </div>
@@ -136,11 +278,6 @@ CfKは市民のための組織です。行政や民間企業の影響を受け�
       </div>
     </div>
   </div>
-  <hr>
-  <div id="help">
-  平成27年度　静岡県駿東郡清水町版
-  </div>
-  
   <!-- JavaScript plugins (requires jQuery) -->
   <script src="js/jquery-1.10.2.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -153,26 +290,14 @@ CfKは市民のための組織です。行政や民間企業の影響を受け�
   <script src="js/bookmark-bubble/example/example.min.js"></script>
   <script src="js/setting.js"></script>
   <script src="js/script.js"></script>
-
-<script type='text/javascript'>
-<!--
-(function() {
-var login = '',
-    fpf = true,
-    fpn = '__ulfpc';
-
-// DO NOT ALTER BELOW THIS LINE
-var id = 6013057, h = '2d2d';
-var rand = rand || Math.floor(Math.random() * 9000000) + 1000000;
-if('http:'==document.location.protocol){var params={id:id,lt:3,h:h,url:document.URL,ref:document.referrer,lg:login,rand:rand,bw:(window.innerWidth?window.innerWidth:(document.documentElement && document.documentElement.clientWidth!=0?document.documentElement.clientWidth:(document.body?document.body.clientWidth:0 ))),bh:(window.innerHeight?window.innerHeight:(document.documentElement && document.documentElement.clientHeight!=0?document.documentElement.clientHeight:(document.body?document.body.clientHeight:0 ))),dpr:(window.devicePixelRatio!=undefined?window.devicePixelRatio:0),sw:screen.width,sh:screen.height,dpr:(window.devicePixelRatio!=undefined?window.devicePixelRatio:0),sb:document.title,guid:'ON'};if(fpf){params.fp=getuid(fpn);}params.eflg=1;var a=document.createElement('a');var lg=document.createElement('img');lg.setAttribute('id','_ullogimgltr');lg.setAttribute('width',1);lg.setAttribute('height',1);lg.setAttribute('alt','');var src='http://le.nakanohito.jp/le/1/?';for(var key in params ) src=src.concat(key+'='+encodeURIComponent(params[key] )+'&');lg.src=src.slice(0,-1);a.setAttribute('href','http://smartphone.userlocal.jp/');a.setAttribute('target','_blank');a.appendChild(lg);var s=document.getElementsByTagName('body')[0];s.appendChild(a);}
-function getuid(key){var arr=[],date=new Date(),exp=new Date();exp.setFullYear(exp.getFullYear()+7);if(document.cookie){arr=document.cookie.split(";");for(var i=0; i<arr.length; i++ ){var str=arr[i].replace(/^\s+|\s+$/g,"");var len=str.indexOf('=');if(str.substring(0,len)==key)return unescape(str.slice(len+1));}}var r=randobet(4);var m=date.getMonth()+1,d=date.getDate(),h=date.getHours(),i=date.getMinutes(),s=date.getSeconds();var num=String(date.getFullYear())+(String(m).length==1?'0':'' )+String(m)+(String(d).length==1?'0':'' )+String(d)+(String(h).length==1?'0':'' )+String(h)+(String(i).length==1?'0':'' )+String(i)+(String(s).length==1?'0':'' )+String(s)+String(r);document.cookie=key+'='+num+'_f; expires='+(new Date(exp).toUTCString())+'; domain='+location.hostname;return num+'_f';}
-function randobet(n){var a='123456789'.split(''),s='';for(var i=0;i<n;i++) s+=a[Math.floor(Math.random() * a.length)];return s;};
-})();
-//-->
-</script>
-<noscript>
-<a href='http://smartphone.userlocal.jp/' target='_blank'><img src='http://le.nakanohito.jp/le/1/?id=6013057&h=2d2d&lt=3&guid=ON&eflg=1' alt='スマートフォン解析' height='1' width='1' border='0' /></a>
-</noscript>
-
+  <script src="js/scriptA.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-43926409-1', '5374.jp');
+  ga('send', 'pageview');
+  </script>
   </body>
 </html>
